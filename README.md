@@ -19,3 +19,7 @@ This repository includes the NGUI implementation of the Data API.
 ### Installation
 
 Place the contents of this repository in the Assets folder of your Unity project.
+
+### License
+
+The Spriter Data API is licensed under the [MIT License](https://github.com/Thinksquirrel-Software/spriterdapi-unity-ngui/blob/master/LICENSE.txt).
