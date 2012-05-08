@@ -44,7 +44,7 @@ public class SpriterNGUIColorHelper : MonoBehaviour
 		color = sprite.color;
 	}
 	
-	void Update()
+	void LateUpdate()
 	{
 		sprite.color = color;
 	}
