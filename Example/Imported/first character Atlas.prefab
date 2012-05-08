@@ -1,0 +1,720 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &100000
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 3
+  m_Component:
+  - 4: {fileID: 400000}
+  - 114: {fileID: 11400000}
+  m_Layer: 0
+  m_Name: first character Atlas
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &400000
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 0}
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d0c51bb0b6e93049af5e88f93826e3b, type: 1}
+  m_Name: 
+  material: {fileID: 2100000, guid: bbbc897ccd9244f62839e65f937f4fc0, type: 2}
+  sprites:
+  - name: shield_b
+    outer:
+      serializedVersion: 2
+      x: 0
+      y: 369
+      width: 48
+      height: 85
+    inner:
+      serializedVersion: 2
+      x: 0
+      y: 369
+      width: 48
+      height: 85
+    paddingLeft: .25
+    paddingRight: .25
+    paddingTop: .152941182
+    paddingBottom: .117647059
+  - name: arm_b
+    outer:
+      serializedVersion: 2
+      x: 91
+      y: 383
+      width: 16
+      height: 19
+    inner:
+      serializedVersion: 2
+      x: 91
+      y: 383
+      width: 16
+      height: 19
+    paddingLeft: .3125
+    paddingRight: .3125
+    paddingTop: .210526317
+    paddingBottom: .157894731
+  - name: forearm_a
+    outer:
+      serializedVersion: 2
+      x: 108
+      y: 370
+      width: 32
+      height: 35
+    inner:
+      serializedVersion: 2
+      x: 108
+      y: 370
+      width: 32
+      height: 35
+    paddingLeft: .09375
+    paddingRight: .125
+    paddingTop: .314285725
+    paddingBottom: .171428576
+  - name: shoulder_a
+    outer:
+      serializedVersion: 2
+      x: 0
+      y: 207
+      width: 22
+      height: 32
+    inner:
+      serializedVersion: 2
+      x: 0
+      y: 207
+      width: 22
+      height: 32
+    paddingLeft: .181818187
+    paddingRight: .636363626
+    paddingTop: .25
+    paddingBottom: 0
+  - name: abs_0
+    outer:
+      serializedVersion: 2
+      x: 124
+      y: 246
+      width: 27
+      height: 22
+    inner:
+      serializedVersion: 2
+      x: 124
+      y: 246
+      width: 27
+      height: 22
+    paddingLeft: .444444448
+    paddingRight: .444444448
+    paddingTop: .590909064
+    paddingBottom: .454545468
+  - name: pelvis_0
+    outer:
+      serializedVersion: 2
+      x: 66
+      y: 247
+      width: 32
+      height: 21
+    inner:
+      serializedVersion: 2
+      x: 66
+      y: 247
+      width: 32
+      height: 21
+    paddingLeft: .34375
+    paddingRight: .28125
+    paddingTop: .428571433
+    paddingBottom: .428571433
+  - name: foot_a
+    outer:
+      serializedVersion: 2
+      x: 49
+      y: 375
+      width: 41
+      height: 27
+    inner:
+      serializedVersion: 2
+      x: 49
+      y: 375
+      width: 41
+      height: 27
+    paddingLeft: .195121944
+    paddingRight: .121951222
+    paddingTop: .0740740746
+    paddingBottom: .259259254
+  - name: leg_a
+    outer:
+      serializedVersion: 2
+      x: 229
+      y: 413
+      width: 23
+      height: 41
+    inner:
+      serializedVersion: 2
+      x: 229
+      y: 413
+      width: 23
+      height: 41
+    paddingLeft: .391304344
+    paddingRight: .434782594
+    paddingTop: .219512194
+    paddingBottom: 0
+  - name: knee_a
+    outer:
+      serializedVersion: 2
+      x: 201
+      y: 286
+      width: 27
+      height: 33
+    inner:
+      serializedVersion: 2
+      x: 201
+      y: 286
+      width: 27
+      height: 33
+    paddingLeft: .259259254
+    paddingRight: .333333343
+    paddingTop: .454545468
+    paddingBottom: .212121218
+  - name: leg_0
+    outer:
+      serializedVersion: 2
+      x: 141
+      y: 369
+      width: 28
+      height: 36
+    inner:
+      serializedVersion: 2
+      x: 141
+      y: 369
+      width: 28
+      height: 36
+    paddingLeft: .214285716
+    paddingRight: .107142858
+    paddingTop: .305555552
+    paddingBottom: .333333343
+  - name: knee_0
+    outer:
+      serializedVersion: 2
+      x: 99
+      y: 281
+      width: 30
+      height: 38
+    inner:
+      serializedVersion: 2
+      x: 99
+      y: 281
+      width: 30
+      height: 38
+    paddingLeft: .466666669
+    paddingRight: .433333337
+    paddingTop: .342105269
+    paddingBottom: .236842111
+  - name: foot_0
+    outer:
+      serializedVersion: 2
+      x: 163
+      y: 270
+      width: 33
+      height: 23
+    inner:
+      serializedVersion: 2
+      x: 163
+      y: 270
+      width: 33
+      height: 23
+    paddingLeft: .181818187
+    paddingRight: .121212125
+    paddingTop: .217391297
+    paddingBottom: .217391297
+  - name: chest_0
+    outer:
+      serializedVersion: 2
+      x: 114
+      y: 325
+      width: 41
+      height: 43
+    inner:
+      serializedVersion: 2
+      x: 114
+      y: 325
+      width: 41
+      height: 43
+    paddingLeft: .317073166
+    paddingRight: .317073166
+    paddingTop: .255813956
+    paddingBottom: .302325577
+  - name: head_0
+    outer:
+      serializedVersion: 2
+      x: 0
+      y: 269
+      width: 51
+      height: 50
+    inner:
+      serializedVersion: 2
+      x: 0
+      y: 269
+      width: 51
+      height: 50
+    paddingLeft: .333333343
+    paddingRight: .176470593
+    paddingTop: .800000012
+    paddingBottom: .180000007
+  - name: idle_hair_2
+    outer:
+      serializedVersion: 2
+      x: 192
+      y: 464
+      width: 63
+      height: 48
+    inner:
+      serializedVersion: 2
+      x: 192
+      y: 464
+      width: 63
+      height: 48
+    paddingLeft: .0793650821
+    paddingRight: .142857149
+    paddingTop: .625
+    paddingBottom: .4375
+  - name: sword_0
+    outer:
+      serializedVersion: 2
+      x: 0
+      y: 455
+      width: 127
+      height: 57
+    inner:
+      serializedVersion: 2
+      x: 0
+      y: 455
+      width: 127
+      height: 57
+    paddingLeft: .244094491
+    paddingRight: .228346452
+    paddingTop: .245614037
+    paddingBottom: .298245609
+  - name: arm_0
+    outer:
+      serializedVersion: 2
+      x: 202
+      y: 248
+      width: 17
+      height: 20
+    inner:
+      serializedVersion: 2
+      x: 202
+      y: 248
+      width: 17
+      height: 20
+    paddingLeft: .588235319
+    paddingRight: .529411793
+    paddingTop: .5
+    paddingBottom: .400000006
+  - name: forearm_0
+    outer:
+      serializedVersion: 2
+      x: 229
+      y: 330
+      width: 24
+      height: 38
+    inner:
+      serializedVersion: 2
+      x: 229
+      y: 330
+      width: 24
+      height: 38
+    paddingLeft: .375
+    paddingRight: .458333343
+    paddingTop: .421052635
+    paddingBottom: .184210524
+  - name: shoulder_0
+    outer:
+      serializedVersion: 2
+      x: 170
+      y: 369
+      width: 29
+      height: 36
+    inner:
+      serializedVersion: 2
+      x: 170
+      y: 369
+      width: 29
+      height: 36
+    paddingLeft: .310344815
+    paddingRight: .482758611
+    paddingTop: .277777791
+    paddingBottom: .194444448
+  - name: idle_hair_1
+    outer:
+      serializedVersion: 2
+      x: 128
+      y: 463
+      width: 63
+      height: 49
+    inner:
+      serializedVersion: 2
+      x: 128
+      y: 463
+      width: 63
+      height: 49
+    paddingLeft: .0793650821
+    paddingRight: .142857149
+    paddingTop: .612244904
+    paddingBottom: .408163279
+  - name: idle_hair_0
+    outer:
+      serializedVersion: 2
+      x: 108
+      y: 406
+      width: 61
+      height: 48
+    inner:
+      serializedVersion: 2
+      x: 108
+      y: 406
+      width: 61
+      height: 48
+    paddingLeft: .0983606577
+    paddingRight: .163934425
+    paddingTop: .625
+    paddingBottom: .4375
+  - name: idle_blink_1
+    outer:
+      serializedVersion: 2
+      x: 200
+      y: 369
+      width: 22
+      height: 11
+    inner:
+      serializedVersion: 2
+      x: 200
+      y: 369
+      width: 22
+      height: 11
+    paddingLeft: 1.63636363
+    paddingRight: .863636374
+    paddingTop: 5.81818199
+    paddingBottom: 2.18181825
+  - name: idle_blink_0
+    outer:
+      serializedVersion: 2
+      x: 59
+      y: 330
+      width: 54
+      height: 38
+    inner:
+      serializedVersion: 2
+      x: 59
+      y: 330
+      width: 54
+      height: 38
+    paddingLeft: .0925925896
+    paddingRight: .333333343
+    paddingTop: .947368443
+    paddingBottom: .657894731
+  - name: forearm_b
+    outer:
+      serializedVersion: 2
+      x: 0
+      y: 240
+      width: 28
+      height: 28
+    inner:
+      serializedVersion: 2
+      x: 0
+      y: 240
+      width: 28
+      height: 28
+    paddingLeft: .5
+    paddingRight: .107142858
+    paddingTop: .357142866
+    paddingBottom: .0714285746
+  - name: abs_1
+    outer:
+      serializedVersion: 2
+      x: 130
+      y: 274
+      width: 24
+      height: 15
+    inner:
+      serializedVersion: 2
+      x: 130
+      y: 274
+      width: 24
+      height: 15
+    paddingLeft: .25
+    paddingRight: .25
+    paddingTop: .466666669
+    paddingBottom: .533333361
+  - name: chest_1
+    outer:
+      serializedVersion: 2
+      x: 156
+      y: 330
+      width: 40
+      height: 38
+    inner:
+      serializedVersion: 2
+      x: 156
+      y: 330
+      width: 40
+      height: 38
+    paddingLeft: .275000006
+    paddingRight: .224999994
+    paddingTop: .315789461
+    paddingBottom: .263157904
+  - name: head_1
+    outer:
+      serializedVersion: 2
+      x: 52
+      y: 270
+      width: 46
+      height: 49
+    inner:
+      serializedVersion: 2
+      x: 52
+      y: 270
+      width: 46
+      height: 49
+    paddingLeft: .673913062
+    paddingRight: .413043469
+    paddingTop: .918367326
+    paddingBottom: .10204082
+  - name: hair_walk_2
+    outer:
+      serializedVersion: 2
+      x: 170
+      y: 406
+      width: 58
+      height: 48
+    inner:
+      serializedVersion: 2
+      x: 170
+      y: 406
+      width: 58
+      height: 48
+    paddingLeft: .37931034
+    paddingRight: .275862068
+    paddingTop: .8125
+    paddingBottom: .25
+  - name: leg_b
+    outer:
+      serializedVersion: 2
+      x: 229
+      y: 282
+      width: 23
+      height: 37
+    inner:
+      serializedVersion: 2
+      x: 229
+      y: 282
+      width: 23
+      height: 37
+    paddingLeft: .391304344
+    paddingRight: .260869563
+    paddingTop: .189189196
+    paddingBottom: .108108111
+  - name: pelvis_1
+    outer:
+      serializedVersion: 2
+      x: 176
+      y: 247
+      width: 25
+      height: 21
+    inner:
+      serializedVersion: 2
+      x: 176
+      y: 247
+      width: 25
+      height: 21
+    paddingLeft: .319999993
+    paddingRight: .280000001
+    paddingTop: .285714298
+    paddingBottom: .333333343
+  - name: leg_1
+    outer:
+      serializedVersion: 2
+      x: 130
+      y: 290
+      width: 32
+      height: 29
+    inner:
+      serializedVersion: 2
+      x: 130
+      y: 290
+      width: 32
+      height: 29
+    paddingLeft: .125
+    paddingRight: .125
+    paddingTop: .137931034
+    paddingBottom: .172413796
+  - name: foot_2
+    outer:
+      serializedVersion: 2
+      x: 29
+      y: 249
+      width: 36
+      height: 19
+    inner:
+      serializedVersion: 2
+      x: 29
+      y: 249
+      width: 36
+      height: 19
+    paddingLeft: .0833333358
+    paddingRight: .25
+    paddingTop: .526315808
+    paddingBottom: .315789461
+  - name: knee_1
+    outer:
+      serializedVersion: 2
+      x: 197
+      y: 326
+      width: 31
+      height: 42
+    inner:
+      serializedVersion: 2
+      x: 197
+      y: 326
+      width: 31
+      height: 42
+    paddingLeft: .193548381
+    paddingRight: .225806445
+    paddingTop: .357142866
+    paddingBottom: .0714285746
+  - name: hair_walk_1
+    outer:
+      serializedVersion: 2
+      x: 0
+      y: 320
+      width: 58
+      height: 48
+    inner:
+      serializedVersion: 2
+      x: 0
+      y: 320
+      width: 58
+      height: 48
+    paddingLeft: .37931034
+    paddingRight: .275862068
+    paddingTop: .8125
+    paddingBottom: .25
+  - name: foot_2_bent
+    outer:
+      serializedVersion: 2
+      x: 163
+      y: 294
+      width: 37
+      height: 25
+    inner:
+      serializedVersion: 2
+      x: 163
+      y: 294
+      width: 37
+      height: 25
+    paddingLeft: .0540540554
+    paddingRight: .243243247
+    paddingTop: .600000024
+    paddingBottom: .200000003
+  - name: hand_a
+    outer:
+      serializedVersion: 2
+      x: 152
+      y: 245
+      width: 23
+      height: 23
+    inner:
+      serializedVersion: 2
+      x: 152
+      y: 245
+      width: 23
+      height: 23
+    paddingLeft: .0869565234
+    paddingRight: .217391297
+    paddingTop: .304347813
+    paddingBottom: .260869563
+  - name: forearm_nohand
+    outer:
+      serializedVersion: 2
+      x: 99
+      y: 241
+      width: 24
+      height: 27
+    inner:
+      serializedVersion: 2
+      x: 99
+      y: 241
+      width: 24
+      height: 27
+    paddingLeft: .125
+    paddingRight: .208333328
+    paddingTop: .666666687
+    paddingBottom: 0
+  - name: hair_walk_0
+    outer:
+      serializedVersion: 2
+      x: 49
+      y: 403
+      width: 58
+      height: 51
+    inner:
+      serializedVersion: 2
+      x: 49
+      y: 403
+      width: 58
+      height: 51
+    paddingLeft: .37931034
+    paddingRight: .275862068
+    paddingTop: .70588237
+    paddingBottom: .235294119
+  - name: foot_a_bent
+    outer:
+      serializedVersion: 2
+      x: 200
+      y: 381
+      width: 42
+      height: 24
+    inner:
+      serializedVersion: 2
+      x: 200
+      y: 381
+      width: 42
+      height: 24
+    paddingLeft: .166666672
+    paddingRight: .119047619
+    paddingTop: .458333343
+    paddingBottom: .416666657
+  mCoordinates: 0
+  mPixelSize: 1
+  mReplacement: {fileID: 0}
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 100000}
+  m_IsPrefabParent: 1
+  m_IsExploded: 1
