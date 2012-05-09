@@ -1,5 +1,5 @@
 // Animation selector example script
-// SwitchAnimations.cs
+// SwitchAnimations_NGUI.cs
 // Spriter Data API - Unity
 //  
 // Authors:
@@ -29,7 +29,7 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
-public class SwitchAnimations : MonoBehaviour {
+public class SwitchAnimations_NGUI : MonoBehaviour {
 	
 	private Animation[] animations;
 	private List<string[]> clips = new List<string[]>();
