@@ -65,6 +65,7 @@ using UnityEditor;
 using UnityEngine;
 using System.Collections.Generic;
 
+/*
 namespace BrashMonkey.Spriter.DataPlugins.NGUI
 {
 	public class SpriterData_NGUI : ISpriterData
@@ -107,8 +108,8 @@ namespace BrashMonkey.Spriter.DataPlugins.NGUI
 		#endregion
 		
 		#region Private fields
-		private ISpriterCharacter mCharacter;
-		private List<ISpriterFrame> mFrames;
+		private ISpriterEntity mCharacter;
+		private List<ISpriterFile> mFrames;
 		private string mPath;
 		private Material mat;
 		private GameObject go;
@@ -482,7 +483,7 @@ namespace BrashMonkey.Spriter.DataPlugins.NGUI
 			{
 				foreach(ISpriterKeyframe kf in a.keyframes)
 				{
-					ISpriterFrame f = FindFrame(kf.name);
+					ISpriterFile f = FindFrame(kf.name);
 					
 					foreach(ISpriterSprite s in f.sprites)
 					{
@@ -495,7 +496,7 @@ namespace BrashMonkey.Spriter.DataPlugins.NGUI
 			}
 			
 			// Tracks the very last processed keyframe for display purposes
-			ISpriterFrame endFrame = mFrames.Count > 0 ? mFrames[mFrames.Count - 1] : null;
+			ISpriterFile endFrame = mFrames.Count > 0 ? mFrames[mFrames.Count - 1] : null;
 			
 			// Go through each animation
 			int ind = 0;
@@ -517,7 +518,7 @@ namespace BrashMonkey.Spriter.DataPlugins.NGUI
 				
 				// The current time in the animation
 				float currentTime = 0;
-				ISpriterFrame lastFrame = null;
+				ISpriterFile lastFrame = null;
 				ISpriterKeyframe lastKeyframe = null;
 				
 				int l = anim.keyframes.Count;
@@ -559,9 +560,9 @@ namespace BrashMonkey.Spriter.DataPlugins.NGUI
 							
 			SaveAssets(characterRoot.gameObject);
 		}	
-		float RecordFrame(Transform characterRoot, ISpriterKeyframe keyframe, ref ISpriterFrame lastFrame, ref ISpriterKeyframe lastKeyframe, ISpriterFrame endFrame, float currentTime, float frameRate, Dictionary<string, AnimationCurve>[] curves)
+		float RecordFrame(Transform characterRoot, ISpriterKeyframe keyframe, ref ISpriterFile lastFrame, ref ISpriterKeyframe lastKeyframe, ISpriterFile endFrame, float currentTime, float frameRate, Dictionary<string, AnimationCurve>[] curves)
 		{
-			ISpriterFrame frame = FindFrame(keyframe.name);
+			ISpriterFile frame = FindFrame(keyframe.name);
 					
 			if (frame == null)
 			{
@@ -1029,7 +1030,7 @@ namespace BrashMonkey.Spriter.DataPlugins.NGUI
 			return result;
 			
 		}
-		ISpriterFrame FindFrame(string name)
+		ISpriterFile FindFrame(string name)
 		{
 			foreach(var frame in mFrames)
 			{
@@ -1076,7 +1077,7 @@ namespace BrashMonkey.Spriter.DataPlugins.NGUI
 			CreateCharacterPrefab();
 		}
 		
-		public ISpriterCharacter character
+		public ISpriterEntity character
 		{
 			get
 			{
@@ -1088,7 +1089,7 @@ namespace BrashMonkey.Spriter.DataPlugins.NGUI
 			}
 		}
 
-		public List<ISpriterFrame> frames
+		public List<ISpriterFile> frames
 		{
 			get
 			{
@@ -1103,3 +1104,5 @@ namespace BrashMonkey.Spriter.DataPlugins.NGUI
 	
 	}
 }
+
+*/
