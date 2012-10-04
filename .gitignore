@@ -1,0 +1,2 @@
+## Remove meta files from the repository and only hold code here. Examples will be in another repo.
+*.meta
