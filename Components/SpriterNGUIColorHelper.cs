@@ -35,17 +35,18 @@ using System.Collections;
 [ExecuteInEditMode]
 public class SpriterNGUIColorHelper : MonoBehaviour
 {
-	public UISprite sprite;
+	public UISprite Sprite;
 	public Color color = Color.white;
-	
-	void Awake()
+	public int depth = 0;
+
+	protected void Awake()
 	{
-		sprite = GetComponent<UISprite>();
-		color = sprite.color;
+		Sprite = GetComponent<UISprite>();
 	}
-	
-	void LateUpdate()
+
+	protected void LateUpdate()
 	{
-		sprite.color = color;
+		Sprite.color = color;
+		Sprite.depth = depth;
 	}
 }
