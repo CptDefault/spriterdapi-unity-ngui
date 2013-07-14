@@ -30,9 +30,6 @@
 //
 // This class extends SpriterDataUnity to provide hooks specific to NGUI.
 // This was developed using NGUI Free. It is untested with the full version, but should work fine.
-//  
-// 
-// Due to some strange behaviour in the Unity Editor, animations are not very editable once imported.
 
 
 using System;
@@ -94,7 +91,7 @@ namespace BrashMonkey.Spriter.DataPlugins.NGUI
 		{
 			var uiSprite = helper.GetComponent<UISprite>();
 
-			UIBaseAtlas.Sprite atlasSprite = uiSprite.atlas.GetSprite(uiSprite.spriteName);
+			UIAtlas.Sprite atlasSprite = uiSprite.atlas.GetSprite(uiSprite.spriteName);
 
 			paddingTL = new Vector2(atlasSprite.paddingLeft * atlasSprite.outer.width, atlasSprite.paddingTop * atlasSprite.outer.height);
 			paddingBR = new Vector2(atlasSprite.paddingRight * atlasSprite.outer.width, atlasSprite.paddingBottom * atlasSprite.outer.height);
@@ -271,7 +268,7 @@ namespace BrashMonkey.Spriter.DataPlugins.NGUI
 			}
 			EditorUtility.SetDirty(atlas.gameObject);
 		}
-		static void UpdateTexture(UIBaseAtlas atlas, List<SpriteEntry> sprites)
+		static void UpdateTexture(UIAtlas atlas, List<SpriteEntry> sprites)
 		{
 			// Get the texture for the atlas
 			var tex = atlas.texture as Texture2D;
@@ -317,25 +314,25 @@ namespace BrashMonkey.Spriter.DataPlugins.NGUI
 		{
 			// Get the list of sprites we'll be updating
 
-			List<UIBaseAtlas.Sprite> spriteList = atlas.spriteList;
+			List<UIAtlas.Sprite> spriteList = atlas.spriteList;
 
-			var kept = new List<UIBaseAtlas.Sprite>();
+			var kept = new List<UIAtlas.Sprite>();
 
 			// The atlas must be in pixels
-			atlas.coordinates = UIBaseAtlas.Coordinates.Pixels;
+			atlas.coordinates = UIAtlas.Coordinates.Pixels;
 
 			// Run through all the textures we added and add them as sprites to the atlas
 			for (int i = 0; i < sprites.Count; ++i)
 			{
 				SpriteEntry se = sprites[i];
-				UIBaseAtlas.Sprite sprite = AddSprite(spriteList, se);
+				UIAtlas.Sprite sprite = AddSprite(spriteList, se);
 				kept.Add(sprite);
 			}
 
 			// Remove unused sprites
 			for (int i = spriteList.Count; i > 0; )
 			{
-				UIBaseAtlas.Sprite sp = spriteList[--i];
+				UIAtlas.Sprite sp = spriteList[--i];
 				if (!kept.Contains(sp)) spriteList.RemoveAt(i);
 			}
 			atlas.MarkAsDirty();
@@ -362,9 +359,9 @@ namespace BrashMonkey.Spriter.DataPlugins.NGUI
 				sprites[i].Rect = NGUIMath.ConvertToPixels(rects[i], tex.width, tex.height, true);
 			}
 		}
-		static UIBaseAtlas.Sprite AddSprite(ICollection<UIBaseAtlas.Sprite> sprites, SpriteEntry se)
+		static UIAtlas.Sprite AddSprite(ICollection<UIAtlas.Sprite> sprites, SpriteEntry se)
 		{
-			UIBaseAtlas.Sprite sprite = sprites.FirstOrDefault(sp => sp.name == se.Tex.name);
+			UIAtlas.Sprite sprite = sprites.FirstOrDefault(sp => sp.name == se.Tex.name);
 
 			// See if this sprite already exists
 
@@ -385,7 +382,7 @@ namespace BrashMonkey.Spriter.DataPlugins.NGUI
 			}
 			else
 			{
-				sprite = new UIBaseAtlas.Sprite {name = se.Tex.name, outer = se.Rect, inner = se.Rect};
+				sprite = new UIAtlas.Sprite {name = se.Tex.name, outer = se.Rect, inner = se.Rect};
 				sprites.Add(sprite);
 			}
 
