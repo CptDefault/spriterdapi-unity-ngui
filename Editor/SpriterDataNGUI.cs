@@ -29,7 +29,9 @@
 // Some notes:
 //
 // This class extends SpriterDataUnity to provide hooks specific to NGUI.
-// This was developed using NGUI Free. It is untested with the full version, but should work fine.
+
+//To use the full version of NGUI, comment out the following line.
+#define NGUI_FREE
 
 
 using System;
@@ -101,7 +103,11 @@ namespace BrashMonkey.Spriter.DataPlugins.NGUI
 		protected override void AddSprite(ISpriterTimelineObject obj, GameObject go)
 		{
 			var uiSprite = go.AddComponent<UISprite>();
+#if NGUI_FREE
 			uiSprite.atlas = UISettings.atlas;
+#else
+			uiSprite.atlas = NGUISettings.atlas;
+#endif
 			uiSprite.spriteName = GetSpriteName(obj.targetFile.name);
 			uiSprite.pivot = UIWidget.Pivot.TopLeft;
 		}
@@ -110,9 +116,16 @@ namespace BrashMonkey.Spriter.DataPlugins.NGUI
 		protected override void CreateSpriteAtlas()
 		{
 			// Create paths and names based on selection
+#if NGUI_FREE
 			UISettings.atlasName = entity.name;
 			string prefabPath = GetSaveFolder() + UISettings.atlasName + " Atlas.prefab";
 			string matPath = GetSaveFolder() + UISettings.atlasName + " Atlas.mat";
+#else
+			NGUISettings.atlasName = entity.name;
+			string prefabPath = GetSaveFolder() + NGUISettings.atlasName + " Atlas.prefab";
+			string matPath = GetSaveFolder() + NGUISettings.atlasName + " Atlas.mat";
+#endif
+			
 
 			// Create the material
 			Shader shader = Shader.Find("Unlit/Transparent Colored");
@@ -132,7 +145,12 @@ namespace BrashMonkey.Spriter.DataPlugins.NGUI
 			Object prefab = PrefabUtility.CreateEmptyPrefab(prefabPath);
 #endif
 			// Create a new game object for the atlas
+#if NGUI_FREE
 			var go = new GameObject(UISettings.atlasName);
+#else
+			var go = new GameObject(NGUISettings.atlasName);
+#endif
+			
 
 			go.AddComponent<UIAtlas>().spriteMaterial = mat;
 
@@ -147,7 +165,13 @@ namespace BrashMonkey.Spriter.DataPlugins.NGUI
 
 			// Select the atlas
 			go = (GameObject)AssetDatabase.LoadAssetAtPath(prefabPath, typeof(GameObject));
+
+#if NGUI_FREE
 			UISettings.atlas = go.GetComponent<UIAtlas>();
+#else
+			NGUISettings.atlas = go.GetComponent<UIAtlas>();
+#endif
+			
 
 			// Textures
 			var texLoad =
@@ -164,7 +188,11 @@ namespace BrashMonkey.Spriter.DataPlugins.NGUI
 			// Create a list of sprites using the collected textures
 			List<SpriteEntry> sprites = CreateSprites(textures);
 
+#if NGUI_FREE
 			UpdateAtlas(UISettings.atlas, sprites);
+#else
+			UpdateAtlas(NGUISettings.atlas, sprites);
+#endif			
 		}
 		static List<SpriteEntry> CreateSprites(List<Texture> textures)
 		{
